@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-#use Plack::Request;
+use Plack::Request;
 #use LINE::Bot::API;
 
 sub {
