@@ -1,2 +1,2 @@
-requires 'Plack::Request';
-requires 'LINE::Bot::API';
+requires "Plack";
+requires "Starman";
