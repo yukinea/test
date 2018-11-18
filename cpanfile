@@ -1,5 +1,6 @@
 requires "Plack";
 requires "Starman";
+requires "LINE::Bot::API";
 
 requires 'parent';
 requires 'Digest::SHA';
