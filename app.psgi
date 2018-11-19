@@ -29,11 +29,14 @@ sub {
     }
 
     unless ($bot->validate_signature($req->content, $req->header('X-Line-Signature'))) {
+        warn 'bad request';
         return [200, [], ['bad request']];
     }
 
     my $events = $bot->parse_events_from_json($req->content);
+    warn 'events';
     for my $event (@{ $events }) {
+        warn 'event: ' . $event;
         my $messages = LINE::Bot::API::Builder::SendMessage->new;
 
         if ($event->is_message_event) {
